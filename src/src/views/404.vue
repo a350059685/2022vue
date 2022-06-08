@@ -21,7 +21,7 @@
         >
         </vue-particles>
         <div style="font-size:128px;text-align:center;margin-top:200px"><b>404</b></div>
-        <div style="text-align:center;font-size:18px;margin:0 0 24px 0">这里是没有姿势的荒原~</div>
+        <div style="text-align:center;font-size:18px;margin:0 0 24px 0">这里没有你想要的东西，只有想要摸鱼的小猫~</div>
         <a-button @click="toHome" key="console" type="primary" size="large" style="width:100px">
                 返回
             </a-button>
