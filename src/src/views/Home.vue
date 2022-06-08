@@ -1435,10 +1435,10 @@ export default {
       var that = this;
       this.$confirm({
         title: "确定要解散团队吗?",
-        content: "解散后团队文档将成为文档创建者的个人文档",
+        content: "Tips：团队解散后团队文档将成为文档创建者的个人文档",
         okText: "解散",
         okType: "danger",
-        cancelText: "算了",
+        cancelText: "取消",
         onOk() {
           Vue.axios({
             method: "get",
@@ -1484,10 +1484,10 @@ export default {
       var that = this;
       this.$confirm({
         title: "确定永久删除该文档吗?",
-        content: "文档将无法恢复",
+        content: "永久删除文档将无法恢复",
         okText: "删除",
         okType: "danger",
-        cancelText: "算了",
+        cancelText: "取消",
         onOk() {
           Vue.axios({
             method: "delete",
