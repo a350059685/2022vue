@@ -164,10 +164,10 @@
 <style>
 .top-logo {
   cursor: pointer;
-  width: 135px;
-  height: 40px;
+  width: 180px;
+  height: 55px;
   background: url("../assets/logo1.png");
-  margin: 14px 48px 0px 48px;
+  margin: 8px 48px 48px 48px;
   float: left;
 }
 
