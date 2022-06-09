@@ -1,40 +1,12 @@
 <template>
 
   <div class="welcome">
-    
-    <vue-particles
-        color="#000"
-        :particleOpacity="0.1"
-        :particlesNumber="40"
-        shapeType="circle"
-        :particleSize="6"
-        linesColor="#000"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.1"
-        :linesDistance="180"
-        :moveSpeed="2"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-        class="lizi"
-        style="z-index:-10"
-      >
-      </vue-particles>
-
     <a-row>
-        <a-col :span="12">
-            <a-row style="margin-top:35%;margin-bottom:20px"><b style="font-size:50px">金刚石文档</b></a-row>
-            <a-row>
-                <a-button size="large" @click="toRegister" style="width:100px;margin-right:20px;background-color: #e7e7e7; color: black;">注册</a-button>
-                <a-button size="large" @click="toLogin" style="width:100px;background-color: #e7e7e7; color: black;">登录</a-button>
-            </a-row>
-            
-        </a-col>
-        <a-col :span="12">
-            
-        </a-col>
+        <a-row style="margin-top:200px;text-align:center;margin-bottom:20px"><b style="font-size:50px">金刚石文档</b></a-row>
+        <a-row>
+          <a-button size="large" @click="toRegister" style="width:100px;margin-right:20px;background-color: #e7e7e7; color: black;">注册</a-button>
+          <a-button size="large" @click="toLogin" style="width:100px;background-color: #e7e7e7; color: black;">登录</a-button>
+        </a-row>   
     </a-row>
   </div>
 </template>
