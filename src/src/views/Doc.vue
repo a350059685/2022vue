@@ -309,7 +309,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/document/" + this.$route.params.id,
+        url: "http://localhost:8090/document/" + this.$route.params.id,
         headers: {
           token: this.$store.state.token,
         },
@@ -350,7 +350,7 @@ export default {
           }
           Vue.axios({
             method: "get",
-            url: "http://39.106.230.20:8090/team/" + that.teamid + "/view",
+            url: "http://localhost:8090/team/" + that.teamid + "/view",
           }).then(function (res) {
             if (res.data.teamCreator.userid == that.$store.state.userid) {
               that.isteamauth = true;
@@ -362,7 +362,7 @@ export default {
       });
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/document/fav/" + this.$route.params.id,
+        url: "http://localhost:8090/document/fav/" + this.$route.params.id,
         headers: {
           token: this.$store.state.token,
         },
@@ -378,7 +378,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: " http://39.106.230.20:8090/document/" + docid + "/editRecord",
+        url: " http://localhost:8090/document/" + docid + "/editRecord",
         headers: {
           token: this.$store.state.token,
         },
@@ -388,7 +388,7 @@ export default {
           const element = that.editrecord[index];
           Vue.axios({
             method: "get",
-            url: " http://39.106.230.20:8090/user/" + element.userid,
+            url: " http://localhost:8090/user/" + element.userid,
           }).then(function (res) {
             that.editrecord[index].userid = res.data.user.username;
           });
@@ -407,7 +407,7 @@ export default {
       //检测云端版本
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/document/" + this.$route.params.id,
+        url: "http://localhost:8090/document/" + this.$route.params.id,
         headers: {
           token: this.$store.state.token,
         },
@@ -415,7 +415,7 @@ export default {
         if (that.old_content == res.data.contents.content) {
           Vue.axios({
             method: "put",
-            url: "http://39.106.230.20:8090/document/",
+            url: "http://localhost:8090/document/",
             headers: {
               token: that.$store.state.token,
             },
@@ -455,7 +455,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/document/fav",
+        url: "http://localhost:8090/document/fav",
         headers: {
           token: this.$store.state.token,
         },
@@ -477,7 +477,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "delete",
-        url: "http://39.106.230.20:8090/document/fav",
+        url: "http://localhost:8090/document/fav",
         headers: {
           token: this.$store.state.token,
         },
@@ -498,7 +498,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/mod_auth",
+        url: "http://localhost:8090/document/mod_auth",
         headers: {
           token: this.$store.state.token,
         },
@@ -519,7 +519,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/mod_teamauth",
+        url: "http://localhost:8090/document/mod_teamauth",
         headers: {
           token: this.$store.state.token,
         },
@@ -541,7 +541,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/mod_auth",
+        url: "http://localhost:8090/document/mod_auth",
         headers: {
           token: this.$store.state.token,
         },
@@ -562,7 +562,7 @@ export default {
     getInfo() {
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/user/info",
+        url: "http://localhost:8090/user/info",
         headers: {
           token: this.$store.state.token,
         },
@@ -576,7 +576,7 @@ export default {
     getCommentList() {
       Vue.axios({
         method: "get",
-        url: `http://39.106.230.20:8090/document/${this.docid}/comments`,
+        url: `http://localhost:8090/document/${this.docid}/comments`,
       }).then((response) => {
         const {
           commentsAndUsernameAndAvatar,
@@ -595,7 +595,7 @@ export default {
     handleSubmitComment() {
       Vue.axios({
         method: "post",
-        url: `http://39.106.230.20:8090/document/${this.docid}/createComment`,
+        url: `http://localhost:8090/document/${this.docid}/createComment`,
         data: {
           content: this.comment,
         },
@@ -617,7 +617,7 @@ export default {
       console.log(item);
       Vue.axios({
         method: "get",
-        url: `http://39.106.230.20:8090/document/${item.comment.docid}/comment/${item.comment.comid}/delete`,
+        url: `http://localhost:8090/document/${item.comment.docid}/comment/${item.comment.comid}/delete`,
         headers: {
           token: this.$store.state.token,
         },

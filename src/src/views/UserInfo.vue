@@ -198,7 +198,7 @@ export default {
     getInfo() {
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/user/"+this.$route.params.id,
+        url: "http://localhost:8090/user/"+this.$route.params.id,
       }).then((response) => {
         this.data = response.data.user;
       });

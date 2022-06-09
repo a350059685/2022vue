@@ -90,7 +90,7 @@ router.beforeResolve((to, from, next) => {
     //拦截非法访问文档
     Vue.axios({
       method: "get",
-      url: "http://39.106.230.20:8090/document/" + docid,
+      url: "http://localhost:8090/document/" + docid,
       headers: {
         token: store.state.token,
       },
@@ -106,7 +106,7 @@ router.beforeResolve((to, from, next) => {
   if (store.state.token!=null) {
     Vue.axios({
       method: "get",
-      url: "http://39.106.230.20:8090/message/unread",
+      url: "http://localhost:8090/message/unread",
       headers: {
         token: store.state.token,
       },

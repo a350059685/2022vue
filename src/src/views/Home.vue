@@ -884,7 +884,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/team/myTeams",
+        url: "http://localhost:8090/team/myTeams",
         headers: {
           token: this.$store.state.token,
         },
@@ -910,7 +910,7 @@ export default {
       if (this.sider_status != 2) {
         Vue.axios({
           method: "get",
-          url: "http://39.106.230.20:8090/document/" + type,
+          url: "http://localhost:8090/document/" + type,
           headers: {
             token: this.$store.state.token,
           },
@@ -921,7 +921,7 @@ export default {
         Vue.axios({
           method: "get",
           url:
-            "http://39.106.230.20:8090/team/" +
+            "http://localhost:8090/team/" +
             this.current_team.teamid +
             "/documents",
         }).then(function (response) {
@@ -934,7 +934,7 @@ export default {
       Vue.axios({
         method: "get",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/view",
       }).then(function (response) {
@@ -952,7 +952,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/template/pub",
+        url: "http://localhost:8090/template/pub",
         headers: {
           token: this.$store.state.token,
         },
@@ -1014,7 +1014,7 @@ export default {
       Vue.axios({
         method: "post",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/update",
         headers: {
@@ -1034,7 +1034,7 @@ export default {
       Vue.axios({
         method: "post",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/update",
         headers: {
@@ -1054,7 +1054,7 @@ export default {
       Vue.axios({
         method: "get",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/exit",
         headers: {
@@ -1077,7 +1077,7 @@ export default {
       Vue.axios({
         method: "get",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/deleteMember?deletedname=" +
           username,
@@ -1106,7 +1106,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "delete",
-        url: "http://39.106.230.20:8090/document/" + docid,
+        url: "http://localhost:8090/document/" + docid,
         headers: {
           token: this.$store.state.token,
         },
@@ -1123,12 +1123,12 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/user/" + doc.creatorid,
+        url: "http://localhost:8090/user/" + doc.creatorid,
       }).then(function (response) {
         doc.createusername = response.data.user.username;
         Vue.axios({
           method: "get",
-          url: "http://39.106.230.20:8090/user/" + doc.lastedituserid,
+          url: "http://localhost:8090/user/" + doc.lastedituserid,
         }).then(function (response) {
           doc.lasteditusername = response.data.user.username;
           that.current_doc = doc;
@@ -1151,7 +1151,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/mod_auth",
+        url: "http://localhost:8090/document/mod_auth",
         headers: {
           token: this.$store.state.token,
         },
@@ -1171,7 +1171,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/mod_teamauth",
+        url: "http://localhost:8090/document/mod_teamauth",
         headers: {
           token: this.$store.state.token,
         },
@@ -1192,7 +1192,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/mod_auth",
+        url: "http://localhost:8090/document/mod_auth",
         headers: {
           token: this.$store.state.token,
         },
@@ -1219,7 +1219,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/document",
+        url: "http://localhost:8090/document",
         headers: {
           token: this.$store.state.token,
         },
@@ -1240,7 +1240,7 @@ export default {
       Vue.axios({
         method: "post",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/createDocument",
         headers: {
@@ -1275,10 +1275,10 @@ export default {
       var url = "";
       if (this.current_team == null) {
         url =
-          "http://39.106.230.20:8090/document/template/" + this.current_tempid;
+          "http://localhost:8090/document/template/" + this.current_tempid;
       } else {
         url =
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/createDocument/template/" +
           this.current_tempid;
@@ -1316,7 +1316,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/team/create",
+        url: "http://localhost:8090/team/create",
         headers: {
           token: this.$store.state.token,
         },
@@ -1341,7 +1341,7 @@ export default {
         var that = this;
         Vue.axios({
           method: "post",
-          url: "http://39.106.230.20:8090/user/fuzSearch",
+          url: "http://localhost:8090/user/fuzSearch",
           headers: {
             token: this.$store.state.token,
           },
@@ -1360,7 +1360,7 @@ export default {
         var that = this;
         Vue.axios({
           method: "get",
-          url: "http://39.106.230.20:8090/team/search",
+          url: "http://localhost:8090/team/search",
           params: {
             searchContent: this.teamName,
           },
@@ -1395,7 +1395,7 @@ export default {
       Vue.axios({
         method: "get",
         url:
-          "http://39.106.230.20:8090/team/" +
+          "http://localhost:8090/team/" +
           this.current_team.teamid +
           "/inviteMember",
         headers: {
@@ -1416,7 +1416,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/team/" + teamid + "/apply",
+        url: "http://localhost:8090/team/" + teamid + "/apply",
         headers: {
           token: that.$store.state.token,
         },
@@ -1443,7 +1443,7 @@ export default {
           Vue.axios({
             method: "get",
             url:
-              "http://39.106.230.20:8090/team/" +
+              "http://localhost:8090/team/" +
               that.current_team.teamid +
               "/deleteTeam",
             headers: {
@@ -1467,7 +1467,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/document/recover/" + docid,
+        url: "http://localhost:8090/document/recover/" + docid,
         headers: {
           token: this.$store.state.token,
         },
@@ -1491,7 +1491,7 @@ export default {
         onOk() {
           Vue.axios({
             method: "delete",
-            url: "http://39.106.230.20:8090/document/permanent/" + docid,
+            url: "http://localhost:8090/document/permanent/" + docid,
             headers: {
               token: that.$store.state.token,
             },
@@ -1511,7 +1511,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "delete",
-        url: "http://39.106.230.20:8090/document/permanent/all",
+        url: "http://localhost:8090/document/permanent/all",
         headers: {
           token: this.$store.state.token,
         },

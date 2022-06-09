@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  const base = 'http://39.106.230.20:8090/'
+  const base = 'http://localhost:8090/'
 
   export default {
     name: 'shareDocModal',
