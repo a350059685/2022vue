@@ -620,7 +620,7 @@
               </a-list>
             </a-col>
             <a-col :span="2" style="text-align:left;margin-right:24px">
-              <a-modal v-model="inviteVisible" title="邀请成员" :footer="null">
+              <a-modal v-model="inviteVisible" title="添加成员" :footer="null">
                 <a-input
                   allowClear
                   v-model="memberName"
@@ -645,7 +645,7 @@
                           type="primary"
                           @click="invite_member(item.username)"
                           :disabled="false"
-                        >邀请</a-button>
+                        >添加</a-button>
                       </a-col>
                     </a-row>
                   </a-list-item>
@@ -711,7 +711,7 @@
                     <div style="text-align:right;margin-top:7px">
                       <transition name="slide-fade">
                         <a-button v-if="!ismanage&&isleader" @click="showInviteModal" type="link">
-                          <a-icon type="plus" />邀请成员
+                          <a-icon type="plus" />添加成员
                         </a-button>
                         <a-button v-if="ismanage&&isleader" type="danger" @click="dismissTeam">
                           <a-icon type="close" />解散团队
@@ -1406,9 +1406,9 @@ export default {
         },
       }).then(function (response) {
         if (response.data.success == true) {
-          that.$message.success("邀请已发送", 1);
+          that.$message.success("已添加成员", 1);
         } else {
-          that.$message.error("邀请失败", 1);
+          that.$message.error("添加失败", 1);
         }
       });
     },
