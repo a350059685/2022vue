@@ -51,18 +51,8 @@
           <a-input size="large" placeholder="手机号" v-model="phone" style="margin-top:30px">
             <a-icon slot="prefix" type="phone" />
           </a-input>
-          <a-input-search
-            style="margin-top:30px;margin-bottom:15px"
-            placeholder="邮箱验证码"
-            size="large"
-            @search="sendMail"
-            v-model="authcode"
-          >
-            <a-button v-if="count==0" slot="enterButton">获取验证码</a-button>
-            <a-button v-else disabled slot="enterButton">{{count}}秒后重试</a-button>
-          </a-input-search>
           <div v-if="errorLogin" style="color:red">用户名或密码错误！</div>
-          <a href="#/login">已有账号？点击这里登录</a>
+          <a  href="#/login" style="margin-top:50px">已有账号？点击这里登录</a>
           <a-button
             size="large"
             type="primary"
@@ -114,7 +104,7 @@ export default {
       phone: "",
       repassword: "",
       token: "",
-      authcode: "",
+      //authcode: "",
       timer: null,
       count: 0,
       errorLogin: false,
@@ -131,7 +121,7 @@ export default {
         errorTip = "请输入您的密码";
       else if (this.email == "") errorTip = "请输入您的邮箱";
       else if (this.phone == "") errorTip = "请输入您的手机号码";
-      else if (this.authcode == "") errorTip = "请输入邮箱验证码";
+      //else if (this.authcode == "") errorTip = "请输入邮箱验证码";
       else if (!regEmail.test(this.email)) errorTip = "请输入正确的邮箱";
       else if (!regPhone.test(this.phone)) errorTip = "请输入正确的手机号码";
       else if (this.password != this.repassword)
@@ -142,13 +132,13 @@ export default {
       }
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/register",
+        url: "http://localhost:8090/register",
         data: {
           username: this.username,
           password: this.password,
           email: this.email,
           phone: this.phone,
-          code: this.authcode,
+          //code: this.authcode,
         },
       }).then(function (response) {
         console.log(response.data);
@@ -160,32 +150,6 @@ export default {
           that.$message.error(response.data.message);
         }
       });
-    },
-    sendMail() {
-      var that = this;
-      Vue.axios({
-        method: "post",
-        url: "http://39.106.230.20:8090/code",
-        data: {
-          username: this.username,
-          email: this.email,
-        },
-      }).then(function (response) {
-        console.log(response.data);
-        if (response.data.success == true) {
-          that.$message.success("验证码已发送");
-          that.count = 60;
-          that.timer = setInterval(that.startTimer, 1000);
-        } else {
-          that.$message.error(response.data.message);
-        }
-      });
-    },
-    startTimer() {
-      this.count -= 1;
-      if (this.count == 0) {
-        clearInterval(this.timer);
-      }
     },
   },
   created() {

@@ -97,7 +97,7 @@ export default {
     getInfo() {
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/user/info",
+        url: "http://localhost:8090/user/info",
         headers: {
           token: this.$store.state.token,
         },
@@ -108,7 +108,7 @@ export default {
     getMessage() {
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/message/messages",
+        url: "http://localhost:8090/message/messages",
         headers: {
           token: this.$store.state.token,
         },
@@ -122,7 +122,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/message/"+messageid,
+        url: "http://localhost:8090/message/"+messageid,
         headers: {
           token: this.$store.state.token,
         },
@@ -147,7 +147,7 @@ export default {
       }
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/message/invite/"+messageid+"/"+str,
+        url: "http://localhost:8090/message/invite/"+messageid+"/"+str,
         headers: {
           token: this.$store.state.token,
         },
@@ -172,7 +172,7 @@ export default {
       }
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/message/apply/"+messageid+"/"+str,
+        url: "http://localhost:8090/message/apply/"+messageid+"/"+str,
         headers: {
           token: this.$store.state.token,
         },

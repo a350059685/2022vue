@@ -326,7 +326,7 @@ export default {
         this.data.avatar = this.imageUrl;
         Vue.axios({
           method: "put",
-          url: "http://39.106.230.20:8090/user/mod_info",
+          url: "http://localhost:8090/user/mod_info",
           headers: {
             token: this.$store.state.token,
           },
@@ -359,7 +359,7 @@ export default {
     getInfo() {
       Vue.axios({
         method: "get",
-        url: "http://39.106.230.20:8090/user/info",
+        url: "http://localhost:8090/user/info",
         headers: {
           token: this.$store.state.token,
         },
@@ -382,7 +382,7 @@ export default {
       this.temp.avatar = this.data.avatar;
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/user/mod_info",
+        url: "http://localhost:8090/user/mod_info",
         headers: {
           token: this.$store.state.token,
         },
@@ -412,7 +412,7 @@ export default {
       }
       Vue.axios({
         method: "put",
-        url: "http://39.106.230.20:8090/user/mod_password",
+        url: "http://localhost:8090/user/mod_password",
         headers: {
           token: this.$store.state.token,
         },
@@ -432,7 +432,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/user/updateEmail",
+        url: "http://localhost:8090/user/updateEmail",
         headers: {
           token: this.$store.state.token,
         },
@@ -455,7 +455,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/changeEmail/code",
+        url: "http://localhost:8090/changeEmail/code",
         data: {
           email: this.temp.email,
         },

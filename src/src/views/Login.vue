@@ -107,7 +107,7 @@ export default {
       var that = this;
       Vue.axios({
         method: "post",
-        url: "http://39.106.230.20:8090/login",
+        url: "http://localhost:8090/login",
         data: {
           username: this.username,
           password: this.password,
@@ -118,7 +118,7 @@ export default {
           that.$store.state.token = response.data.token;
           Vue.axios({
             method: "get",
-            url: "http://39.106.230.20:8090/user/info",
+            url: "http://localhost:8090/user/info",
             headers: {
               token: that.$store.state.token,
             },
