@@ -11,7 +11,7 @@ module.exports = {
       less: {
         lessOptions: {
           modifyVars: {
-            'primary-color': '#3b444b',
+            'primary-color': '#252851',
             'link-color': '#ec583a',
             'btn-border-radius-sm': '0px',
             //'btn-border-radius-base': '0px',还是有个圆角好看一点
