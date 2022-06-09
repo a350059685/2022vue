@@ -21,7 +21,7 @@
       style="z-index:-10"
     ></vue-particles>
     <a-row>
-      <a-col :span="12">
+      <a-col :span="24">
         <a-card style="width:400px;margin:100px auto;text-align:center">
           <h1 style="margin-top:20px;margin-left:5px;font-size:38px;float:left">
             <b>注册账户</b>
@@ -52,7 +52,8 @@
             <a-icon slot="prefix" type="phone" />
           </a-input>
           <div v-if="errorLogin" style="color:red">用户名或密码错误！</div>
-          <a  href="#/login" style="margin-top:50px">已有账号？点击这里登录</a>
+          <div style="height: 15px;"> </div>
+          <a  href="#/login" style="height: 50px;">已有账号？点击这里登录</a>
           <a-button
             size="large"
             type="primary"
@@ -64,7 +65,7 @@
           <div style="text-align:center" />
         </a-card>
       </a-col>
-      <a-col :span="12"></a-col>
+      
     </a-row>
   </div>
 </template>

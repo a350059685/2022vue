@@ -21,7 +21,7 @@
       >
       </vue-particles>
     <a-row>
-      <a-col :span="12">
+      <a-col :span="24">
         <a-card style="width:400px;margin:220px auto;text-align:center">
           <h1 style="margin-top:20px;margin-left:5px;font-size:38px;float:left">
             <b>登录账户</b>
@@ -57,7 +57,6 @@
           <div style="text-align:center" />
         </a-card>
       </a-col>
-      <a-col :span="12"></a-col>
     </a-row>
   </div>
 </template>

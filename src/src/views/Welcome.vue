@@ -14,7 +14,7 @@
 <style>
   .welcome {
   background: url("../assets/cover.png");
-  background-size: 100% 100% ;
+  background-size: 100% 100%;
   background-attachment: fixed;
 }
 
