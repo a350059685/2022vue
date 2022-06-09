@@ -1,5 +1,7 @@
 <template>
+
   <div class="welcome">
+    
     <vue-particles
         color="#000"
         :particleOpacity="0.1"

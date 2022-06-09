@@ -167,7 +167,7 @@
   width: 180px;
   height: 55px;
   background: url("../assets/logo1.png");
-  margin: 8px 48px 48px 48px;
+  margin: 8px 48px 8px 48px;
   float: left;
 }
 

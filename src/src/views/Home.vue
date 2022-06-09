@@ -680,7 +680,7 @@
                       style="cursor:pointer"
                     >{{team_creator.username}}</span>
                     <span>
-                      <a-icon type="crown" style="font-size:16px;color:#E85A4F" />
+                      <a-icon type="crown" style="font-size:16px;color:#3b444b" />
                     </span>
                   </div>
                   <a-list-item slot="renderItem" slot-scope="item">
